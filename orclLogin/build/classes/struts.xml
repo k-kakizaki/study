@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+	<constant name="struts.enable.DynamicMethodInvocation" value="true" />
+	<constant name="struts.devMode" value="true" />
+
+	<package name="com.orclLogin.action" extends="struts-default">
+
+		<action name="LoginAction" class="com.orclLogin.action.LoginAction" method="execute">
+			<result name="success">myPage.jsp</result>
+			<result name="error">login.jsp</result>
+		</action>
+
+		<action name="RegisterAction" class="com.orclLogin.action.RegisterAction" method="execute">
+			<result name="success">register.jsp</result>
+		</action>
+
+		<action name="ConfirmAction" class="com.orclLogin.action.ConfirmAction" method="execute">
+			<result name="success">confirm.jsp</result>
+			<result name="error">register.jsp</result>
+		</action>
+
+		<action name="CompleteAction" class="com.orclLogin.action.CompleteAction" method="execute">
+			<result name="success">complete.jsp</result>
+		</action>
+
+		<action name="HomeAction" class="com.orclLogin.action.HomeAction" method="execute">
+			<result name="success">login.jsp</result>
+		</action>
+
+	</package>
+</struts>

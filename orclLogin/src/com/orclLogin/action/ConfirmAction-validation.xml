@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE validators PUBLIC
+  "-//Apache Struts//XWork Validator 1.0.2//EN"
+  "http://struts.apache.org/dtds/xwork-validator-1.0.2.dtd">
+
+<validators>
+	<field name="userName">
+        <field-validator type="requiredstring">
+            <param name="trim">true</param>
+            <message>ユーザ名が未入力です。</message>
+        </field-validator>
+    </field>
+
+    <field name="userName">
+        <field-validator type="stringlength">
+            <param name="minLength">1</param>
+            <param name="maxLength">8</param>
+            <message>ユーザ名は1文字以上8文字以下の範囲で入力してください。</message>
+        </field-validator>
+    </field>
+
+    <field name="userId">
+        <field-validator type="requiredstring">
+            <param name="trim">true</param>
+            <message>ユーザIDが未入力です。</message>
+        </field-validator>
+    </field>
+
+    <field name="userId">
+        <field-validator type="stringlength">
+            <param name="minLength">1</param>
+            <param name="maxLength">8</param>
+            <message>ユーザIDは1文字以上8文字以下の範囲で入力してください。</message>
+        </field-validator>
+    </field>
+
+    <field name="password">
+        <field-validator type="requiredstring">
+            <param name="trim">true</param>
+            <message>パスワードが未入力です。</message>
+        </field-validator>
+    </field>
+
+    <field name="password">
+        <field-validator type="stringlength">
+            <param name="minLength">1</param>
+            <param name="maxLength">8</param>
+            <message>パスワードは1文字以上8文字以下の範囲で入力してください。</message>
+        </field-validator>
+    </field>
+</validators>
